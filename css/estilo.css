@@ -4,6 +4,10 @@ root {
 
 body{
     background-color: #00A8FF;
+    margin: 0px;
+    padding: 0px;
+    background-image: url(http://www.kenexa.com/Portals/_default/Skins/KenexaCorporate/images/pattern-header-blue.gif);
+    font-family: 'Open Sans', sans-serif;
 }
 #banner{
     background-image: url(../imagenes/pixel_banerr.png);
@@ -14,18 +18,19 @@ body{
 #banner_titulo{
     background-image: url(../imagenes/tituloo.png);
     width: 336px;
-    height: 43;
+    height: 43px;
     z-index: 100;
     margin-top: 15px;
     position: absolute;  
     margin-left: 10%;
 }
 #contenido{
-    background-color: #01CFFF;
+    background-color: #fff;
     height: 530px;
     width: 65%;
     margin-left: 10%;
     margin-top: -3px;
+    background-image: url(http://www.kenexa.com/Portals/_default/Skins/KenexaCorporate/images/pattern-header-blue.gif);
 
 }
 #contenido_error{
@@ -44,11 +49,7 @@ body{
     height: 600px;
     width: 100%;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -50%;
-    margin-top: 50px;
-    top: 0;
+    background-image: url(http://www.kenexa.com/Portals/_default/Skins/KenexaCorporate/images/pattern-header-blue.gif);
 }
 #logo{
     background-image: url(../imagenes/logoo.png);
@@ -57,7 +58,6 @@ body{
     float: right;
     position: absolute;
     margin-left: 65%;
-    margin-top: -5%;
     background-repeat: no-repeat;
 
 }
@@ -100,21 +100,25 @@ fieldset{
 */
 
 #menu{
-    margin-left: 10%;
     float: left;
     z-index: 400;
     margin-top: -3px;
+    width: 100%;
+    background-color: rgb(23, 104, 206);
+    border-bottom-width: 2px;
+    border-bottom-color: rgb(53, 141, 190);
+    border-bottom-style: solid;
 }
 #button {
+    margin-left: 10%;
     background: #2586d7;
-    margin: 0;
     padding: 0;
+    margin-top: 0;
 }
 #button li {
     display: inline;
 }
 #button li a {
-    font-family: Arial;
     font-size:16px;
     text-decoration: none;
     float:left;
@@ -134,13 +138,13 @@ fieldset{
     float: right;
 }
 .error{
-display: inline-table;
-color: white;
-background-color: red;
-float: initial;
-position: absolute;
-border-style: solid;
-border-width: 2;
+    display: inline-table;
+    color: white;
+    background-color: red;
+    float: initial;
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
 }
 
 
@@ -148,4 +152,51 @@ border-width: 2;
     font-size: x-large;
     color: #FFFFFF;
     background-color: #01CFFF;
+}
+#buscar_usuario{
+    color: white;
+}
+#barra_mapa_del_sitio{
+    width: 100%;
+    height: 31px;
+    background-image: url(http://www.kenexa.com/Portals/_default/Skins/KenexaCorporate/images/green-grad-twitter.png);
+}
+#mapa_del_sitio{
+    margin-top: -16px;
+    width: 100%;
+    height: 300px;
+    background-image: url(http://www.kenexa.com/Portals/_default/Skins/KenexaCorporate/images/darkdenim3.png);
+}
+#footer{
+    height: 31px;
+    width: 100%;
+    background-color: #fff;
+}
+#texto_footer{
+    font-size: small;
+    margin-left: 10%;
+}
+
+
+#links_mapa_sitio {
+    margin-left: 10%;
+    background: rgba(255, 255, 255, 0);
+    padding: 0;
+    margin-top: 0;
+}
+#links_mapa_sitio li {
+    display: inline;
+}
+#links_mapa_sitio li a {
+    text-decoration: none;
+    float:left;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: rgba(255, 255, 255, 0);;
+    color: #fff;
+}
+#links_mapa_sitio li a:hover {
+    background-color: rgba(255, 255, 255, 0);;
+    padding-bottom:12px;
 }

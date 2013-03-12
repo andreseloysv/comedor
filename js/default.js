@@ -1,5 +1,14 @@
-
 $(document).ready(function() {
+    $(".dialogo").dialog({
+      modal: true,
+      autoOpen: false,
+      resizable: false,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
     countdown=0; //constante que sirve para reiniciar el contador en #timer
     $('#buscar_usuario').submit(function() {
 	buscar_usuario();  
@@ -38,19 +47,14 @@ function buscar_usuario(){
     $.post(url,{
 	Modelo:metodo
     }, function(data) {
-	$('#resultado').html(data);
-	if ($('#contenido_error').val()!=undefined){
-	    timer = document.createElement('div');
-	    timer.id="timer";
-	    $('#resultado').append(timer);
-	    conteo_regresivo("http://127.0.0.1/comedor/Vista/Estudiante/agregar.php");
-	}
+	alert(data);
+	$('#resultado').append(data);
+	$( ".dialogo" ).dialog( "open" );
     });
-    
 }
 
 function carga_dialogo(){
-    $( "#dialogo" ).dialog({
+    $( ".dialogo" ).dialog({
 	modal: true,
 	buttons: {
 	    Ok: function() {

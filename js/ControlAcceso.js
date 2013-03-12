@@ -3,7 +3,6 @@ function buscar_usuario(){
     var url='../../rutas.php';
     var metodo="ControlAcceso/buscar_usuario/cedula:"+cedula;
     data="Modelo";
-    
     $.post(url,{
         Modelo:metodo
     }, function(data) {
