@@ -1,13 +1,17 @@
 <?php
-
 include '../ControladorAplicacion.php';
 
 class TrabajadorController extends ControladorAplicacion {
-    
+
+    function agregar_trabajador($campos = array(), $modelos = array()) {
+	$this->agregar($campos, $modelos);
+	Redireccion::DireccionarVista("default", "dialogo_respuesta");
+    }
+
 }
 
-$control_acceso = new ControlAccesoController();
-if (method_exists($control_acceso, $_SESSION['comportamiento'])) {
-    $control_acceso->$_SESSION['comportamiento']($_SESSION['campos'], $_SESSION['modelo'], $_SESSION['condiciones']);
+$trabajador = new TrabajadorController();
+if (method_exists($trabajador, $_SESSION['comportamiento'])) {
+$trabajador->$_SESSION['comportamiento']($_SESSION['campos'], $_SESSION['modelo'], $_SESSION['condiciones']);
 }
 ?>

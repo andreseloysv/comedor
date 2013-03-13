@@ -148,7 +148,7 @@ class ConsultaMysql {
 		$this->respuesta['error'][] = "Por favor registrese.";
 	    } else {
 		while ($row = mysql_fetch_assoc($result)) {
-		    $this->respuesta['respuesta'] = $row;
+		    $this->respuesta['respuesta'][] = $row;
 		}
 	    }
 	}

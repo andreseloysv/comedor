@@ -9,7 +9,7 @@ class Redireccion {
         header("Location: " . $url . "/comedor/Vista/" . $modelo . "/" . $funcion . ".php");
     }
 
-    public static function DireccionarControlador($modelo, $funcion) {
+    public static function DireccionarControlador($modelo, $funcion=NULL) {
         $url = 'http://127.0.0.1';
         header("Location: " . $url . "/comedor/Controlador/" . $modelo . "Controller.php");
     }

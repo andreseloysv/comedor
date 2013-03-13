@@ -1,14 +1,4 @@
 $(document).ready(function() {
-    $(".dialogo").dialog({
-      modal: true,
-      autoOpen: false,
-      resizable: false,
-      buttons: {
-        Ok: function() {
-          $( this ).dialog( "close" );
-        }
-      }
-    });
     countdown=0; //constante que sirve para reiniciar el contador en #timer
     $('#buscar_usuario').submit(function() {
 	buscar_usuario();  
@@ -18,12 +8,19 @@ $(document).ready(function() {
 	buscar_usuario();  
     });
     
-    $('#agregar_usuario').submit(function() {    
-	if ($("#agregar_usuario").valid()) {
-	    agregar_usuario($('#agregar_usuario :input'));
+    $('#agregar_estudiante').submit(function() {    
+	if ($("#agregar_estudiante").valid()) {
+	    agregar_estudiante($('#agregar_estudiante :input'));
 	}
 	return false;
     });
+    $('#agregar_trabajador').submit(function() { 
+	if ($("#agregar_trabajador").valid()) {
+	    agregar_trabajador($('#agregar_trabajador :input'));
+	}
+	return false;
+    });
+    
 });
 function conteo_regresivo(url){
     $(function(){
@@ -31,7 +28,7 @@ function conteo_regresivo(url){
 	clearInterval(countdown);
 	countdown = setInterval(function(){
 	    $("#timer").html("Redireccionando en: "+count);
-	    if(count <= 0){
+	    if(count <= 1){
 		clearInterval(countdown);
 		window.location = url;
 	    }
@@ -39,23 +36,13 @@ function conteo_regresivo(url){
 	}, 1000);
     });
 }
-function buscar_usuario(){
-    var cedula=$("#ControlAcceso_cedula").val();
-    var url='../../rutas.php';
-    var metodo="ControlAcceso/buscar_usuario/cedula:"+cedula;
-    data="Modelo";
-    $.post(url,{
-	Modelo:metodo
-    }, function(data) {
-	alert(data);
-	$('#resultado').append(data);
-	$( ".dialogo" ).dialog( "open" );
-    });
-}
 
-function carga_dialogo(){
-    $( ".dialogo" ).dialog({
+
+function carga_dialogo(dialogo){
+    $(dialogo).dialog({
 	modal: true,
+	autoOpen: true,
+	resizable: false,
 	buttons: {
 	    Ok: function() {
 		$( this ).dialog( "close" );

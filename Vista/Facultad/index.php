@@ -1,29 +1,33 @@
 <?php
 include '../../configuracion/Nucleo.php';
 ?>
+<script>
+    
+    buscar_facultad();
+    
+</script>
 <div id="pagina">
     <div id="banner">
         <a href="../../index.php" ><div id="banner_titulo"></div></a>
         <a href="../../index.php" ><div id="logo"></div></a>
     </div>
     <div name="menu" id="menu">
-	<ul id="button">
-	    <li><a href="reportes.php"> Reportes</a></li>
-	    <li><a href="../Estudiante/agregar.php"> +Estudiante</a></li>
-	    <li><a href="../Trabajador/agregar.php"> +Trabajador</a></li>    
-	</ul>
+        <ul id="button">
+            <li><a href="reportes.php"> Reportes</a></li>
+            <li><a href="../Estudiante/agregar.php"> +Estudiante</a></li>
+            <li><a href="../Trabajador/agregar.php"> +Trabajador</a></li>
+        </ul>
     </div>
     <div id="contenido">
-        <div id="barra_busqueda">
-            <form id="buscar_usuario" action="../../rutas.php" method="POST" >
-                <label>Codigo del Carnet: </label>
-                <input type="text" name="ControlAcceso_cedula" id="ControlAcceso_cedula">
-                <input type="submit" value="buscar">
-            </form>
-        </div>
+	<!--        <form action="../../rutas.php" method="POST" >
+		    <label>Buscar: </label>
+		    <input type="text" name="id">
+		    <input type="hidden" name="Modelo" value="Estudiante/mostrar">
+		    <input type="submit" value="buscar">
+		</form>-->
         <div id="foto"></div>
-        <div id="resultado" name="resultado"></div>
     </div>
+    <div id="dialogo" name="dialogo" title="Mensaje"></div>
     <div id="barra_mapa_del_sitio"></div>
     <div id="mapa_del_sitio">
 	<div id="columna_1_mapa_sitio">

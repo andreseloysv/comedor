@@ -4,6 +4,7 @@ root {
 
 body{
     background-color: #00A8FF;
+    overflow-y: hidden;
     margin: 0px;
     padding: 0px;
     background-image: url(http://www.kenexa.com/Portals/_default/Skins/KenexaCorporate/images/pattern-header-blue.gif);
@@ -26,18 +27,17 @@ body{
 }
 #contenido{
     background-color: #fff;
-    height: 530px;
+    height: 450px;
     width: 65%;
     margin-left: 10%;
-    margin-top: -3px;
     background-image: url(http://www.kenexa.com/Portals/_default/Skins/KenexaCorporate/images/pattern-header-blue.gif);
 
 }
 #contenido_error{
-    background-color: red;
+    background-color: #FF4936;
     color: #FFFFFF;
     font-size: xx-large;
-    display: inline;
+    display: none;
 }
 #barra_busqueda{
     padding-top: 10%;
@@ -72,16 +72,20 @@ body{
 }
 #resultado{
     float:left;
-    margin-top: 5%;
+    margin-top: 50px;
     margin-left: 5%;
     width: 60%;
-    height: 60%;
-    background-color: yellow;
+    color: #fff;
+    z-index: 10;
+    position: absolute;
+    margin-left: 240px;
+    width: 495px;
 }
 fieldset{
     border-width:4px;
     border-style:solid;
     border-color: royalblue;
+    border-radius: 8px;
 }
 .compo_fielset label{
     display: block;
@@ -138,10 +142,8 @@ fieldset{
     float: right;
 }
 .error{
-    display: inline-table;
     color: white;
-    background-color: red;
-    float: initial;
+    background-color: #F24533;
     position: absolute;
     border-style: solid;
     border-width: 2px;
@@ -164,11 +166,11 @@ fieldset{
 #mapa_del_sitio{
     margin-top: -16px;
     width: 100%;
-    height: 300px;
+    height: 200px;
     background-image: url(http://www.kenexa.com/Portals/_default/Skins/KenexaCorporate/images/darkdenim3.png);
 }
 #footer{
-    height: 31px;
+    height: 100%;
     width: 100%;
     background-color: #fff;
 }
@@ -199,4 +201,20 @@ fieldset{
 #links_mapa_sitio li a:hover {
     background-color: rgba(255, 255, 255, 0);;
     padding-bottom:12px;
+}
+
+.compo_fielset .ui-button{
+    width: 20px;
+    height: 23px;
+    position: absolute;
+}
+.fondo_resultado{
+    position: absolute;
+    width: 495px;
+    height: 260px;
+    margin-left: 240px;
+    margin-top: 40px;
+    opacity: 0.4;
+    background-color: #023A81;
+    border-radius: 16px;
 }

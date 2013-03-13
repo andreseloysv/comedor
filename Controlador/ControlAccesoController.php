@@ -10,7 +10,6 @@ class ControlAccesoController extends ControladorAplicacion {
     }
 
     function buscar_usuario($campos, $modelo, $condiciones) {
-	exit(var_dump("holaasdsda"));
         $datos = $this->buscar($campos, "Estudiante", $condiciones);
         $_SESSION['respuesta'] = $datos;
         if (empty($datos['respuesta'])) {
