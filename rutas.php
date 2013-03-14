@@ -11,6 +11,11 @@ if (isset($_POST['Modelo'])) {
 	array_pop($_POST['campos']);
 	array_pop($_POST['campos']);
 	$campos = $_POST['campos'];
+
+	foreach ($campos as $key => $value) {
+	    if (intval($value))
+		$campos[$key] = intval($value);
+	}
     } else {
 	$campos = NULL;
     }
@@ -25,6 +30,7 @@ if (isset($_POST['Modelo'])) {
 	    }
 	}
     }
+    (var_dump($campos));
     $_SESSION['condiciones'] = $arreglo_condiciones;
     $_SESSION['campos'] = $campos;
     Redireccion::DireccionarControlador($_SESSION['modelo']);

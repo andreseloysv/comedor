@@ -1,3 +1,13 @@
+$(document).ready(function() {
+    
+    buscar_facultad_escuela('#contenido_facultad',"#combobox_facultad");
+	
+
+    
+
+        
+});
+
 function conteo_regresivo(url){
     $(function(){
 	count =3;
@@ -16,21 +26,26 @@ function conteo_regresivo(url){
 function agregar_estudiante($inputs){    
     var values = {};
     $inputs.each(function() {
-	values[this.name] = $(this).val();
+	if (isNumber($(this).val())){
+	    values[this.name] = parseInt($(this).val());
+	}
+	else{
+	    values[this.name] = $(this).val();
+	}
     });
     var url='../../rutas.php';
     var metodo="Estudiante/agregar_estudiante/";
     data="Modelo";
+    console.debug(values);
     $.post(url,{
 	Modelo:metodo, 
 	campos:values
     }, function(data) {
 	$('#dialogo').html(data);
-	    timer = document.createElement('div');
-	    timer.id="timer";
-	    $('#dialogo').append(timer);
-	    conteo_regresivo("http://127.0.0.1/comedor/Vista/ControlAcceso/");
-	
+	timer = document.createElement('div');
+	timer.id="timer";
+	$('#dialogo').append(timer);
+	//conteo_regresivo("http://127.0.0.1/comedor/Vista/ControlAcceso/");
 	carga_dialogo();
     });
 }

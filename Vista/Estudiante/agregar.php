@@ -38,13 +38,15 @@ include '../../configuracion/Nucleo.php';
 			<label>Correo Electronico</label>
 			<input type = "text" placeholder = "ejemplo@ucv.com" name="correo_electronico"  size="25" class="required email">
 		    </div>
-		    <div class = "compo_fielset">
-			<label>Escuela</label>
-			<input type = "text" placeholder = "Escuela de ejemplo" name="Escuela"  size="25">
-		    </div>
-		    <div class = "compo_fielset">
+		    <div class = "compo_fielset" name="Facultad">
 			<label>Facultad</label>
-			<input type = "text" placeholder = "Facultad de ejemplo" name="Facultad"  size="25">
+			<div id="contenido_facultad"></div>
+<!--			<input type = "text" placeholder = "Facultad de ejemplo"   size="25">-->
+		    </div>
+		    <div class = "compo_fielset" name="Escuela">
+			<label>Escuela</label>
+			<div id="contenido_escuela"></div>
+
 		    </div>
 		    <input type="hidden" name="Modelo" value="Estudiante/agregar_estudiante">
 		    <input type="submit" value="Agregar" name="enviar_formulario" 

@@ -50,3 +50,7 @@ function carga_dialogo(dialogo){
 	}
     });
 }
+
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}

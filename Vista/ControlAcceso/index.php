@@ -22,6 +22,7 @@ include '../../configuracion/Nucleo.php';
             </form>
         </div>
         <div id="foto"></div>
+	<div id="fondo_resultado" name="fondo_resultado" class="fondo_resultado"></div>
         <div id="resultado" name="resultado"></div>
     </div>
     <div id="barra_mapa_del_sitio"></div>

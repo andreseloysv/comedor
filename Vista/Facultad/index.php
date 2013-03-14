@@ -3,7 +3,7 @@ include '../../configuracion/Nucleo.php';
 ?>
 <script>
     
-    buscar_facultad();
+    buscar_facultad('#contenido',"#combobox_facultad");
     
 </script>
 <div id="pagina">
