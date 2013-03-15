@@ -8,7 +8,8 @@ include '../../configuracion/Nucleo.php';
     </div>
     <div name="menu" id="menu">
 	<ul id="button">
-	    <li><a href="reportes.php"> Reportes</a></li>
+            <li><a href="../ControlAcceso/index.php"> Inicio</a></li>
+	    <li><a href="../Reportes/index.php"> Reportes</a></li>
 	    <li><a href="../Estudiante/agregar.php"> +Estudiante</a></li>
 	    <li><a href="../Trabajador/agregar.php"> +Trabajador</a></li>    
 	</ul>
@@ -29,7 +30,8 @@ include '../../configuracion/Nucleo.php';
     <div id="mapa_del_sitio">
 	<div id="columna_1_mapa_sitio">
 	    <ul id="links_mapa_sitio">
-		<li><a href="reportes.php"> Reportes</a></li>
+                <li><a href="../ControlAcceso/index.php"> Inicio</a></li>
+		<li><a href="../Reportes/index.php"> Reportes</a></li>
 		<li><a href="../Estudiante/agregar.php"> +Estudiante</a></li>
 		<li><a href="../Trabajador/agregar.php"> +Trabajador</a></li>    
 	    </ul>

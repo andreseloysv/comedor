@@ -6,21 +6,30 @@ include '../../configuracion/Nucleo.php';
         <a href="../../index.php" ><div id="banner_titulo"></div></a>
         <a href="../../index.php" ><div id="logo"></div></a>
     </div>
-    <div id="contenido">
-        <form action="../../rutas.php" method="POST" >
-            <label>Buscar: </label>
-            <input type="text" name="id">
-            <input type="hidden" name="Modelo" value="Estudiante/mostrar">
-            <input type="submit" value="buscar">
-        </form>
-        <div id="foto"></div>
+    <div name="menu" id="menu">
+	<ul id="button">
+	    <li><a href="../ControlAcceso/index.php"> Inicio</a></li><li><a href="../Reportes/index.php"> Reportes</a></li>
+	    <li><a href="../Estudiante/agregar.php"> +Estudiante</a></li>
+	    <li><a href="../Trabajador/agregar.php"> +Trabajador</a></li>    
+	</ul>
     </div>
-        <div id="dialogo" name="dialogo" title="Mensaje"></div>
+    <div id="contenido">
+        <div id="barra_busqueda">
+            <form id="buscar_usuario" action="../../rutas.php" method="POST" >
+                <label>Codigo del Carnet: </label>
+                <input type="text" name="ControlAcceso_cedula" id="ControlAcceso_cedula">
+                <input type="submit" value="buscar">
+            </form>
+        </div>
+        <div id="foto"></div>
+	<div id="fondo_resultado" name="fondo_resultado" class="fondo_resultado"></div>
+        <div id="resultado" name="resultado"></div>
+    </div>
     <div id="barra_mapa_del_sitio"></div>
     <div id="mapa_del_sitio">
 	<div id="columna_1_mapa_sitio">
 	    <ul id="links_mapa_sitio">
-		<li><a href="../Reportes/index.php"> Reportes</a></li>
+		<li><a href="../ControlAcceso/index.php"> Inicio</a></li><li><a href="../Reportes/index.php"> Reportes</a></li>
 		<li><a href="../Estudiante/agregar.php"> +Estudiante</a></li>
 		<li><a href="../Trabajador/agregar.php"> +Trabajador</a></li>    
 	    </ul>

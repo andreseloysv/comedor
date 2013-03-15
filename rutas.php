@@ -8,8 +8,8 @@ if (isset($_POST['Modelo'])) {
     $_SESSION['comportamiento'] = $comportamiento = $aux[1];
 
     if (isset($_POST['campos'])) {
-	array_pop($_POST['campos']);
-	array_pop($_POST['campos']);
+	unset($_POST['campos']["enviar_formulario"]);
+        unset($_POST['campos']["Modelo"]);
 	$campos = $_POST['campos'];
 
 	foreach ($campos as $key => $value) {
@@ -30,7 +30,6 @@ if (isset($_POST['Modelo'])) {
 	    }
 	}
     }
-    exit(var_dump($campos));
     $_SESSION['condiciones'] = $arreglo_condiciones;
     $_SESSION['campos'] = $campos;
     Redireccion::DireccionarControlador($_SESSION['modelo']);

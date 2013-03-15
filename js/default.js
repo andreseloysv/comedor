@@ -22,20 +22,20 @@ $(document).ready(function() {
     });
     
 });
-function conteo_regresivo(url){
-    $(function(){
-	count =3;
-	clearInterval(countdown);
-	countdown = setInterval(function(){
-	    $("#timer").html("Redireccionando en: "+count);
-	    if(count <= 1){
-		clearInterval(countdown);
-		window.location = url;
-	    }
-	    count --;
-	}, 1000);
-    });
-}
+//function conteo_regresivo(url){
+//    $(function(){
+//	count =3;
+//	clearInterval(countdown);
+//	countdown = setInterval(function(){
+//	    $("#timer").html("Redireccionando en: "+count);
+//	    if(count <= 1){
+//		clearInterval(countdown);
+//		window.location = url;
+//	    }
+//	    count --;
+//	}, 1000);
+//    });
+//}
 
 
 function carga_dialogo(dialogo){
