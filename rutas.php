@@ -30,7 +30,7 @@ if (isset($_POST['Modelo'])) {
 	    }
 	}
     }
-    (var_dump($campos));
+    exit(var_dump($campos));
     $_SESSION['condiciones'] = $arreglo_condiciones;
     $_SESSION['campos'] = $campos;
     Redireccion::DireccionarControlador($_SESSION['modelo']);

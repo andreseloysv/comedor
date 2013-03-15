@@ -33,6 +33,8 @@ function agregar_estudiante($inputs){
 	    values[this.name] = $(this).val();
 	}
     });
+    values["fk_escuela"]=$("#combobox_escuela option:selected").val();
+    values["fk_facultad"]=$("#combobox_facultad option:selected").val();
     var url='../../rutas.php';
     var metodo="Estudiante/agregar_estudiante/";
     data="Modelo";
